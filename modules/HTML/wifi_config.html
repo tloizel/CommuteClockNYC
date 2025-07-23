@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WiFi Configuration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px; /* Add padding to the body */
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        form {
+            display: block;
+            padding: 30px; /* Increased padding */
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(100% - 40px); /* Account for body padding */
+            max-width: 400px;
+            margin: 0 auto; /* Center the form */
+            box-sizing: border-box;
+        }
+        label {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="password"], select {
+            padding: 10px;
+            font-size: 16px;
+            width: 100%; /* Full width input fields */
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%; /* Make button full width for mobile */
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        @media (min-width: 600px) {
+            form {
+                width: 50%; /* Wider form for larger screens */
+            }
+            input[type="submit"] {
+                width: auto; /* Button width adjusts for larger screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>WiFi Configuration &#x26F4;</h1>
+    <form method="POST" action="/">
+        <label for="wifi_name">WiFi Name:</label>
+        <input type="text" id="wifi_name" name="wifi_name">
+        <label for="wifi_password">WiFi Password:</label>
+        <input type="password" id="wifi_password" name="wifi_password">
+        <input type="submit" value="Connect">
+    </form>
+</body>
+</html>
