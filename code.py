@@ -202,11 +202,11 @@ def display_ferry_times():
                     if boat_tilegrid:
                         display_width = 64
                         boat_width = boat_bitmap.width
-                        clamped_minutes = max(0, min(30, minutes_left))
+                        clamped_minutes = max(1, min(30, minutes_left))
                         
                         left_pos = 2
                         right_pos = display_width - boat_width - 2
-                        boat_x = left_pos + (right_pos - left_pos) * (30 - clamped_minutes) / 30
+                        boat_x = left_pos + (right_pos - left_pos) * (30 - clamped_minutes) / 29
                         boat_tilegrid.x = int(boat_x)
                         # Move boat up 8 rows when showing time
                         boat_tilegrid.y = 2
